@@ -1,4 +1,3 @@
-package DSA.Leetcode;
 //Leetcode link -> https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/1496457291/
 //Yt link -> https://www.youtube.com/watch?v=6WNZQBHWQJs
 public class rotatedArrays {
