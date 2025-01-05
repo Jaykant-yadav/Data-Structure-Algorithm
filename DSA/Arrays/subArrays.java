@@ -1,6 +1,7 @@
 package DSA.Arrays;
 
 public class subArrays {
+    //Time Complexity -> O(n3)
     public static void printSubArrays(int arr[]){
         int ts = 0;
         for(int i=0; i<arr.length; i++) { //start
