@@ -1,6 +1,7 @@
 package DSA.Arrays;
 
 public class trappingRainWater {
+    //Time Complexity -> O(n)
     public static int trappedRainwater(int height[]){
         int n = height.length;
         //calculate left max boundry - Array

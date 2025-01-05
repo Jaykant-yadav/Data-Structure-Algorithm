@@ -1,6 +1,7 @@
 package DSA.Arrays;
 
 public class reverseArray {
+    //Two Pointer Approach
     //Time Complexity = O(n)
     //Space Complexity = O(1)
     public static void reverseNum(int num[]) {
