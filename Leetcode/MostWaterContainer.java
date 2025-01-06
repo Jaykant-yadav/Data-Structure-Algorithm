@@ -15,7 +15,7 @@ public class MostWaterContainer {
         return maxWater;
     }
 
-    //Two Pointer - O(n)
+    //Two Pointer - O(n) -> Linear time
     public static int mostWater2(int height[]){
         int maxWater = 0;
         int leftPointer = 0, rightPointer = height.length-1;
