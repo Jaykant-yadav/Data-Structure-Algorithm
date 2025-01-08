@@ -1,7 +1,7 @@
-package DSA.Arrays;
 import java.util.*;
 
 public class containsDuplicates {
+    //Time Complexity -> O(n)
     public static boolean twichElement(int num[]){
         //sort arrays
         Arrays.sort(num);
