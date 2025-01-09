@@ -9,7 +9,7 @@ public class singleElementSortedArray {
          * 
          * int st = 0, end = n-1;
          * while (st <= end) {
-         * int mid = st + (end - st) / 2;
+         * int mid = st +  (end - st) / 2;
          * if(mid == 0 && arr[0] != arr[1]) {
          * return arr[mid];
          * }
