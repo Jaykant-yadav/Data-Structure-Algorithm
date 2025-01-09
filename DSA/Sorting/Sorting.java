@@ -20,9 +20,30 @@ public class Sorting {
             }
         }
     }
+
+    //Selection Sort - O(n2)
+    public static void selectionSort(int arr[]){
+        //turn -> i
+        for(int i=0; i<arr.length-1; i++) {
+            int minPos = i;
+            for(int j=i+1; j<arr.length; j++) {
+                //incresing -> (>) & decresing -> (<)
+                if(arr[minPos] > arr[j]) {
+                    minPos = j;
+                }
+            }
+
+            //swap
+            int temp = arr[minPos];
+            arr[minPos] = arr[i];
+            arr[i] = temp;
+        }
+    }
     public static void main(String[] args) {
         int arr[] = {2, 5, 1, 9, 7, 6};
-        BubbleSort(arr);
+        // BubbleSort(arr);
+        
+        selectionSort(arr);
         printArr(arr);
     }
 }
