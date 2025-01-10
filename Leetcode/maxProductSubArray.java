@@ -13,8 +13,8 @@ public class maxProductSubArray {
                 suffix = 1;
             }
 
-            prefix *= arr[i];
-            suffix *= arr[n-i-1];
+            prefix *= arr[i]; //left
+            suffix *= arr[n-i-1]; //right
             max = Math.max(max, Math.max(prefix, suffix));
         }
         return max;
