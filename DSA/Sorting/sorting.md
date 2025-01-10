@@ -15,7 +15,7 @@
 ### Reverse Order Sorting Concept
 - `reverseOrder()` -> Reverse Order function internally used comparator .
 
-```http
+```text
 comparator -> typical comparator, you compare two elements and return:
 
 -> Negative value if the first element is "less than" the second element.
