@@ -1,6 +1,6 @@
 //Leetcode link -> https://leetcode.com/problems/container-with-most-water/submissions/1497625370/
 //Yt Link -> https://www.youtube.com/watch?v=EbkMABpP52U&list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&index=14
-public class MostWaterContainer {
+public class mostWaterContainer {
     //Brute Force - O(n2) 
     public static int mostWater(int height[]){
         int maxWater = 0;

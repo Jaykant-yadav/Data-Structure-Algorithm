@@ -3,3 +3,7 @@
 -> Like - Video, Links, Concepts mention on this readme files.
 ```
 - [Maximum Product of SubArray](https://github.com/Jaykant-yadav/Data-Structure-Algorithm/blob/main/Leetcode/maxProductSubArray.java) - [Video Links](https://www.youtube.com/watch?v=hnswaLJvr6g)
+
+- [Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/) - [Video Links](https://www.youtube.com/watch?v=EbkMABpP52U&list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&index=15)
+
+- [Remove Duplicates from sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/submissions/1504830227/)
