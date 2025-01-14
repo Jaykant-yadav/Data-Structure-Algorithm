@@ -9,4 +9,4 @@
 - [Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/) - [Video Links](https://www.youtube.com/watch?v=EbkMABpP52U&list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&index=15) `Medium`
 
 
-- [75 Sort array of 0s, 1s & 2s / set Color](https://leetcode.com/problems/sort-colors/description/) - [Video Links](https://www.youtube.com/watch?v=J48aGjfjYTI&list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&index=25) `Medium`
+- [Sort array of 0s, 1s & 2s / set Color](https://leetcode.com/problems/sort-colors/description/) - [Video Links](https://www.youtube.com/watch?v=J48aGjfjYTI&list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&index=25) `Medium`
