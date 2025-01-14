@@ -7,7 +7,7 @@ public class sortColor {
     }
 
     //Optimized Solution - O(n)
-    public static void sortArray1(int nums[]){
+    public static void sortArray1(int nums[]){ // two pass
         int n = nums.length;
         int count = 0, count1 = 0, count2 = 0;
         //O(n)
@@ -42,7 +42,7 @@ public class sortColor {
 
     //Optimal Approach - O(n)
     //DNF Algo - Dutch National Flag Algorithm
-    public static void DNF(int nums[]){
+    public static void DNF(int nums[]){ // single pass
         int n = nums.length;
         int low = 0, mid = 0, high = n-1;
 
