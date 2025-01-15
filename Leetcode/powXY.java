@@ -1,5 +1,6 @@
 import java.util.*;
 public class powXY {
+    //Pow(X, Y)
     public static double powOfXy(double X, int Y){
         return (double) Math.pow(X, Y);
     }
