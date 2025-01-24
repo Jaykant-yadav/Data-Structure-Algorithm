@@ -33,6 +33,8 @@ public class twoD_Arrays {
         System.out.println("largest element : " + max);
         System.out.println("smallest element : " + min);
     }
+
+    //
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int matrix[][] = new int[3][3];
@@ -42,7 +44,7 @@ public class twoD_Arrays {
         //input
         for(int i=0; i<n; i++) {
             for(int j=0; j<m; j++) {
-                matrix[i][j] = sc.nextInt();
+                // matrix[i][j] = sc.nextInt();
             }
         }
 

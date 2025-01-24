@@ -1,5 +1,5 @@
 public class searchInSortedMatrix {
-    public static boolean staircaseSearch(int matrix[][], int key){
+    public static boolean staircaseSearch(int matrix[][], int key){ //O(n+m)
         int row = 0, col = matrix[0].length-1;
 
         while(row<matrix.length && col >= 0){
