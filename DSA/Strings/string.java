@@ -52,7 +52,7 @@ public class string {
         return substr;
     }
 
-    //Convert first letter of each Word to UPPERCASE
+    //Convert first letter of each Word to UPPERCASE -> <CODE NATION>
     public static String toUpperCase(String str) {
         StringBuilder sb = new StringBuilder("");
 
@@ -66,6 +66,39 @@ public class string {
                 sb.append(Character.toUpperCase(str.charAt(i)));
             } else {
                 sb.append(str.charAt(i));
+            }
+        }
+        return sb.toString();
+    }
+
+    //String Compression -> (AMAZON)
+    public static String compress(String str) { //O(n)
+        String newStr = "";
+        for(int i=0; i<str.length(); i++) {
+            Integer count = 1;
+            while (i<str.length()-1 && str.charAt(i) == str.charAt(i+1)) {
+                count++;
+                i++;
+            }
+            newStr += str.charAt(i);
+            if(count > 1) {
+                newStr += count.toString();
+            }
+        }
+        return newStr;
+    }
+    //Using String Builder
+    public static String compresses(String str) {
+        StringBuilder sb = new StringBuilder("");
+        for(int i=0; i<str.length(); i++) {
+            Integer count = 1;
+            while (i<str.length()-1 && str.charAt(i) == str.charAt(i+1)) {
+                count++;
+                i++;
+            }
+            sb.append(str.charAt(i));
+            if(count > 1) {
+                sb.append(count.toString());
             }
         }
         return sb.toString();
@@ -150,9 +183,11 @@ public class string {
 
         //Convert a first Charater capital
         String str3 = "hello, i am jaykant";
-        System.out.println(toUpperCase(str3));
+        // System.out.println(toUpperCase(str3));
 
-
+        //String Compression
+        String strs = "aaaabbbbcccdd";
+        System.out.println(compresses(strs));
 
 
     }
