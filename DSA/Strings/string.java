@@ -51,6 +51,25 @@ public class string {
         }
         return substr;
     }
+
+    //Convert first letter of each Word to UPPERCASE
+    public static String toUpperCase(String str) {
+        StringBuilder sb = new StringBuilder("");
+
+        char ch = Character.toUpperCase(str.charAt(0));
+        sb.append(ch);
+
+        for(int i=1; i<str.length(); i++){
+            if(str.charAt(i) == ' ' && i<str.length()-1){
+                sb.append(str.charAt(i));
+                i++;
+                sb.append(Character.toUpperCase(str.charAt(i)));
+            } else {
+                sb.append(str.charAt(i));
+            }
+        }
+        return sb.toString();
+    }
     public static void main(String[] args) {
         char arr[] = {'a', 'b', 'c', 'd'};
         
@@ -104,11 +123,34 @@ public class string {
             System.out.println("Strings are not equal");
         } */
 
-        // String s = "Helloworld";
-        // System.out.println(s.substring(0, 5));
-        // System.out.println(substring(s, 0, 5));
+        //Strings Functions -> SubString -> str.substring(si, ei);
+        String str1 = "HelloWorld";
+        // System.out.println(str1.substring(1, 5));
 
+
+        //Largest String Findout -> O(X * n)
         String fruits[] = {"Apple", "Banana", "Mango"};
+        String largest = fruits[0];
+
+        for(int i=0; i<fruits.length; i++) {
+            if(largest.compareTo(fruits[i]) < 0){
+                largest = fruits[i];
+            }
+        }
+        // System.out.println(largest);
+
+        //String Builder
+        StringBuilder sb = new StringBuilder("");
+        for(char ch='a'; ch<='z'; ch++) {
+            sb.append(ch);
+        } //abcdefghijklmnopqrstuvwxyz
+        //O(26)
+        //O(26 * n^2)
+        // System.out.println(sb + " ");
+
+        //Convert a first Charater capital
+        String str3 = "hello, i am jaykant";
+        System.out.println(toUpperCase(str3));
 
 
 
