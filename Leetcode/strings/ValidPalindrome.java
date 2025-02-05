@@ -1,5 +1,5 @@
 package strings;
-
+//Valid Palindrome
 public class ValidPalindrome {
     public static boolean isPalindrome(String s) {
         int st = 0, end = s.length()-1;
