@@ -1,7 +1,8 @@
 package arrays;
 
 public class peakElement {
-    public static int peakMountainArr(int arr[]) {
+    //Time Complexity - O(log n)
+    public static int peakMountainArr(int arr[]) { 
         int n = arr.length;
         int st = 1, end = n-2;
 
