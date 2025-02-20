@@ -75,7 +75,7 @@ public class recursion {
     }
 
     //WAF to find the first occurence of an element in an Array
-    public static int firstOccur(int arr[], int idx, int key) {
+    public static int firstOccur(int arr[], int idx, int key) { //TC & SC -> O(n)
         if(idx == arr.length) {
             return -1;
         }
@@ -84,6 +84,19 @@ public class recursion {
         }
 
         return firstOccur(arr, idx+1, key);
+    }
+
+    //WAF to find the last occurence of an element in an Array
+    public static int lastOccur(int arr[], int idx, int key) { //TC & SC -> O(n)
+        if(idx == arr.length) {
+            return -1;
+        }
+        int isFound = lastOccur(arr, idx+1, key);
+        if(isFound == -1 && arr[idx] == key) {
+            return idx;
+        }
+
+        return isFound;
     }
     public static void main(String[] args) {
         int num = 6;
@@ -94,7 +107,9 @@ public class recursion {
         // System.out.println(fib(num));
         int arr[] = {1, 2, 3, 6, 4, 5, 8, 5};
         // System.out.println(isSorted(arr, 0));
-        System.out.println(firstOccur(arr, 0, 5));
+        // System.out.println(firstOccur(arr, 0, 5));
+        System.out.println(lastOccur(arr, 0, 5));
+
 
     }
 }
