@@ -91,13 +91,28 @@ public class recursion {
         if(idx == arr.length) {
             return -1;
         }
-        int isFound = lastOccur(arr, idx+1, key);
+        //look forward
+        int isFound = lastOccur(arr, idx+1, key); //key search and stored idx
+        //check with self
         if(isFound == -1 && arr[idx] == key) {
             return idx;
         }
 
         return isFound;
     }
+
+    //Print x to the power n
+    public static int power(int x, int n) {
+        if(n == 0) {
+            return 1;
+        }
+        /* int xnm1 = power(x, n-1);
+        int xn = x * xnm1;
+        return xn; */
+
+        return power(x, n-1) * x;
+    }
+
     public static void main(String[] args) {
         int num = 6;
         // descOrder(num);
@@ -108,7 +123,8 @@ public class recursion {
         int arr[] = {1, 2, 3, 6, 4, 5, 8, 5};
         // System.out.println(isSorted(arr, 0));
         // System.out.println(firstOccur(arr, 0, 5));
-        System.out.println(lastOccur(arr, 0, 5));
+        // System.out.println(lastOccur(arr, 0, 5));
+        System.out.println(power(2, 10));
 
 
     }
