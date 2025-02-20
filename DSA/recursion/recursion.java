@@ -73,6 +73,18 @@ public class recursion {
 
         return isSorted(arr, i+1);
     }
+
+    //WAF to find the first occurence of an element in an Array
+    public static int firstOccur(int arr[], int idx, int key) {
+        if(idx == arr.length) {
+            return -1;
+        }
+        if(arr[idx] == key) {
+            return idx;
+        }
+
+        return firstOccur(arr, idx+1, key);
+    }
     public static void main(String[] args) {
         int num = 6;
         // descOrder(num);
@@ -80,7 +92,9 @@ public class recursion {
         // System.out.println(printFacto(num));
         // System.out.println(sumOfNaturalNum(num));
         // System.out.println(fib(num));
-        int arr[] = {1, 2, 3, 6, 5};
-        System.out.println(isSorted(arr, 0));
+        int arr[] = {1, 2, 3, 6, 4, 5, 8, 5};
+        // System.out.println(isSorted(arr, 0));
+        System.out.println(firstOccur(arr, 0, 5));
+
     }
 }
