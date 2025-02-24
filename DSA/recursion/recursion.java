@@ -129,6 +129,24 @@ public class recursion {
         return halfPowerSq;
     }
 
+    //Tilling Problem -> AMAZON
+    public static int tilingProblem(int n) { //2 X n (floor size)
+        //base case
+        if(n == 0 || n == 1) {
+            return 1;
+        }
+
+        //work -> choice
+        //vertical choice
+        int fnm1 = tilingProblem(n-1);
+
+        //Horizontal choice
+        int fnm2 = tilingProblem(n-2);
+
+        int totalWays = fnm1 + fnm2;
+        return totalWays;
+    }
+
     public static void main(String[] args) {
         int num = 6;
         // descOrder(num);
@@ -142,6 +160,7 @@ public class recursion {
         // System.out.println(lastOccur(arr, 0, 5));
         // System.out.println(power(2, 10));
         // System.out.println(optimizedPower(2, 5));
+        System.out.println(tilingProblem(4));
 
     }
 }
