@@ -147,6 +147,25 @@ public class recursion {
         return totalWays;
     }
 
+    //Remove Duplicates in a String -> Google, Microsoft
+    public static void removeDuplicates(String str, int idx, StringBuilder newStr, boolean map[]) {
+        //Base case
+        if(idx == str.length()) {
+            System.out.println(newStr);
+            return;
+        }
+
+        //Work
+        char currChar = str.charAt(idx);
+        if(map[currChar-'a'] == true) {
+            //duplicate
+            removeDuplicates(str, idx+1, newStr, map);
+        } else {
+            map[currChar - 'a'] = true;
+            removeDuplicates(str, idx+1, newStr.append(currChar), map);
+        }
+    }
+
     public static void main(String[] args) {
         int num = 6;
         // descOrder(num);
@@ -160,7 +179,8 @@ public class recursion {
         // System.out.println(lastOccur(arr, 0, 5));
         // System.out.println(power(2, 10));
         // System.out.println(optimizedPower(2, 5));
-        System.out.println(tilingProblem(4));
+        // System.out.println(tilingProblem(4));
+        removeDuplicates("appnnacollege", 0, new StringBuilder(""), new boolean[26]);
 
     }
 }
