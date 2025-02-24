@@ -145,6 +145,8 @@ public class recursion {
 
         int totalWays = fnm1 + fnm2;
         return totalWays;
+
+        // return tilingProblem(n-1) + tilingProblem(n-2);
     }
 
     //Remove Duplicates in a String -> Google, Microsoft
@@ -166,6 +168,27 @@ public class recursion {
         }
     }
 
+    //Friends Pairing Problem -> GOLDMAN SACHS
+    public static int friendsPairing(int n) {
+        //Base Case
+        if(n == 1 || n == 2) {
+            return n;
+        }
+        //Choice
+        //single
+        int fnm1 = friendsPairing(n-1);
+
+        //pair
+        int fnm2 = friendsPairing(n-2);
+        int pairWays = (n-1) * fnm2;
+
+        //total Ways
+        int totalWays = fnm1 + pairWays;
+        return totalWays;
+        
+        // return friendsPairing(n-1) + (n-1) * friendsPairing(n-2);
+    }
+
     public static void main(String[] args) {
         int num = 6;
         // descOrder(num);
@@ -180,7 +203,8 @@ public class recursion {
         // System.out.println(power(2, 10));
         // System.out.println(optimizedPower(2, 5));
         // System.out.println(tilingProblem(4));
-        removeDuplicates("appnnacollege", 0, new StringBuilder(""), new boolean[26]);
+        // removeDuplicates("appnnacollege", 0, new StringBuilder(""), new boolean[26]);
+        System.out.println(friendsPairing(3));
 
     }
 }
