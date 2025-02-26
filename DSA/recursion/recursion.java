@@ -185,8 +185,31 @@ public class recursion {
         //total Ways
         int totalWays = fnm1 + pairWays;
         return totalWays;
-        
+
         // return friendsPairing(n-1) + (n-1) * friendsPairing(n-2);
+    }
+
+    //Binary Strings Problem -> PAYTM
+    public static void printBinStrings(int n, int lastPlace, String str) {
+        //base case
+        if(n == 0) {
+            System.out.println(str);
+            return;
+        }
+
+        //Work
+        /* if(lastPlace == 0) {
+            //Sit 0 on chair n
+            printBinStrings(n-1, 0, str.append("0"));
+            printBinStrings(n-1, 1, str.append("1"));
+        } else {
+            printBinStrings(n-1, 0, str.append("0"));
+        } */
+
+        printBinStrings(n-1, 0, str+"0");
+        if(lastPlace == 0) {
+            printBinStrings(n-1, 1, str+"1");
+        }
     }
 
     public static void main(String[] args) {
@@ -204,7 +227,8 @@ public class recursion {
         // System.out.println(optimizedPower(2, 5));
         // System.out.println(tilingProblem(4));
         // removeDuplicates("appnnacollege", 0, new StringBuilder(""), new boolean[26]);
-        System.out.println(friendsPairing(3));
+        // System.out.println(friendsPairing(3));
+        printBinStrings(3, 0, "");
 
     }
 }
