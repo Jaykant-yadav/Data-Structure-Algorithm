@@ -90,10 +90,50 @@ public class divideConquer {
         return i;
     }
 
+    //Search in rotated Sorted Array - Binary Search
+    public static int searchInRotatedArr(int arr[], int target, int si, int ei) {
+        //Base Case
+        if(si > ei) {
+            return -1;
+        }
+        //kaam
+        int mid = si+(ei-si) / 2; //(si+ei)/2
+        //case Found
+        if(arr[mid] == target) {
+            return mid;
+        }
+
+        //Mid on L1
+        if(arr[si] <= arr[mid]) {
+            //Case a: left
+            if(arr[si] <= target && target <= arr[mid]) {
+                return searchInRotatedArr(arr, target, si, mid-1);
+            }else {
+                //Case b : right
+                return searchInRotatedArr(arr, target, mid+1, ei);
+            }
+        } 
+
+        //Mid on L2
+        else {
+            //Case c : right
+            if(arr[mid] <= target && target <= arr[ei]) {
+                return searchInRotatedArr(arr, target, mid+1, ei);
+            } else {
+                //Case d : left
+                return searchInRotatedArr(arr, target, si, mid-1);
+            }
+
+        }
+        
+    }
+
     public static void main(String[] args) {
-        int arr[] = { 6, 3, 9, 5, 2, 8};
+        int arr[] = {4, 5, 6, 7, 0, 1, 2};
         // mergeSort(arr, 0, arr.length - 1);
-        quickSort(arr, 0, arr.length - 1);
-        printArr(arr);
+        // quickSort(arr, 0, arr.length - 1);
+        // printArr(arr);
+        System.out.println(searchInRotatedArr(arr, 6, 0, arr.length-1));
+            
     }
 }
