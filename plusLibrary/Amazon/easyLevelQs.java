@@ -1,6 +1,7 @@
 package plusLibrary.Amazon;
 
 public class easyLevelQs {
+    //Remove Duplicates from Sorted Arrays
     public static int removeDuplicatesSortedArr(int arr[]) {
         //Approach -> I -> TC - O(n)
         /*int i=0;
