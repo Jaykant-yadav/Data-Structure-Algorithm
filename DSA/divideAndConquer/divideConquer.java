@@ -128,12 +128,50 @@ public class divideConquer {
         
     }
 
+    //Using single loop search in rotated array
+    public static int searchInRotatedArrays(int arr[], int target){
+        int si = 0, ei = arr.length;
+        while (si <= ei) {
+            //Find mid
+            int mid = si + (ei-si)/2;
+
+            //Found element
+            if(arr[mid] == target) {
+                return mid;
+            }
+
+            //Mid if L1 -> array of start to large target but array of mid too small
+            if(arr[si] <= arr[mid]) {
+                //Case a: left side
+                if(arr[si] <= target && target < arr[mid]) {
+                    ei = mid - 1; // end --;
+                }else {
+                    //Case b: right side
+                    si = mid + 1; // start++;
+                }
+            }
+
+            //mid if L2 -> arr[mid] <= target >= arr[ei] -> array of mid to large target but array of end too small
+            else {
+                if(arr[mid] <= target && target <= arr[ei]) {
+                    si = mid + 1; // start++;
+                } else {
+                    ei = mid - 1; //end--;
+                }
+            }
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         int arr[] = {4, 5, 6, 7, 0, 1, 2};
         // mergeSort(arr, 0, arr.length - 1);
         // quickSort(arr, 0, arr.length - 1);
         // printArr(arr);
-        System.out.println(searchInRotatedArr(arr, 6, 0, arr.length-1));
+        // System.out.println(searchInRotatedArr(arr, 6, 0, arr.length-1));
+        System.out.println(searchInRotatedArrays(arr, 0));
+        
+
             
     }
 }
